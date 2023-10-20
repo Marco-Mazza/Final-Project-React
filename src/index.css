@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Rajdhani:wght@300;400;700&display=swap');
+
+html {
+    --primary: #00004b;
+    --secondary: #0c2371;
+    --accent: #34dedf;
+}
+
+:root {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.font-main {
+    font-family: 'Electrolize', sans-serif;
+}
