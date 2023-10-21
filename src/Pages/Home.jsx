@@ -1,4 +1,17 @@
+import { useEffect, useState } from "react"
+
 export default function Home() {
+    const [data, setData] = useState(null)
+
+    useEffect(() => {
+        fetch(`${import.meta.env.VITE_RAWG_API_URL}?dates=2019-01-01,2019-12-31&ordering=-added&key=${import.meta.env.VITE_RAWG_API_KEY}`)
+            .then(r => r.json())
+            .then(r => {
+                setData(r.results);
+            });
+    }, []);
+
+
     return (
         <div className="min-h-screen">
             <div className="md:flex gap-12 px-12 py-12 md:py-24">
@@ -11,6 +24,14 @@ export default function Home() {
                     </p>
                 </div>
             </div>
+            <div className="text-white">
+                {data && data.map((game) => (
+                    <div key={game.id}>
+                        <p>{game.name}</p>
+                        <img className="w-32 h-32 object-cover rounded-full" src={game.background_image} alt="" />
+                    </div>
+                ))}
+            </div>
         </div>
-    )
+    );
 }
