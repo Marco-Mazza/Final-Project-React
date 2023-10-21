@@ -7,11 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        flash: "flash 1s ease infinite both"
+      },
+      keyframes: {
+        flash: {
+          "0%": {
+            boxShadow: "0 0 12px white"
+          },
+          "100%": {
+            boxShadow: "none"
+          },
+        }
+      },
       colors: {
         primary: "var(--primary)",
-        scondary: "var(--secondary)",
-        accent: "var(--accent)"
-      }
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],
