@@ -11,8 +11,8 @@ export default function Navigation() {
             >
             </div>
             <div className="text-white flex justify-between w-2/3 md:w-1/2">
-                <Link to="/home" className="font-bold tracking-widest" >Home</Link>
-                <Link to="/home" className="font-main hidden md:inline" >Home</Link>
+                <Link to="/home" className="font-bold tracking-widest" >ReHack</Link>
+                <Link to="/search" className="font-main hidden md:inline" >Search</Link>
                 <Link to="/home" className="font-main hidden md:inline" >Home</Link>
                 <Link to="/home" className="font-main hidden md:inline" >Home</Link>
             </div>
