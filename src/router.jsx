@@ -23,7 +23,8 @@ export const router = createBrowserRouter([
                 element: <About />
             },
             {
-                path: '/search',
+                path: "/search/:genre?/:num?",
+                // path: "/search/?genres=:genre?&:num=:num?&term=:term?",
                 element: <Search />,
                 loader: getGenres
             },

@@ -1,7 +1,24 @@
 import { useEffect, useState } from "react"
+// import { supabase } from "../Supabase/Client";
 
 export default function Home() {
     const [data, setData] = useState(null)
+
+    // const register = async () => {
+    //     const fakeData = {
+    //         email: Math.random() + 'asd@asd.com',
+    //         password: '1234567',
+    //         confirm_password: '1234567',
+    //         options: {
+    //             data: {
+    //                 username: 'Pippo',
+    //                 first_name: 'Pi',
+    //                 last_name: 'Ppo',
+    //             },
+    //         },
+    //     };
+    //     const { data, error } = await supabase.auth.signUp(fakeData);
+    // };
 
     useEffect(() => {
         fetch(`${import.meta.env.VITE_RAWG_API_URL}?dates=2019-01-01,2019-12-31&ordering=-added&key=${import.meta.env.VITE_RAWG_API_KEY}`)
@@ -14,6 +31,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen">
+
             <div className="md:flex gap-12 px-12 py-12 md:py-24">
                 <div className="w-full mid:w-2/5">
                     <h1 className="bg-gradient-to-r from-primary to-accent bg-clip-text text-6xl font-extrabold text-transparent dark:from-sky-600 dark: dark:to-sky-100 font-main pb-12">
